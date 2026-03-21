@@ -5,57 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <style>
-        * {
-            font-family: Consolas;
-            background-color: black;
-            color: white;
-            padding: 0;
-            margin: 0;
+        @keyframes button {
+            100% {
+                transform: scale(1.1);
+            }
         }
 
-        .title {
-            text-align: center;
-            padding-top: 10px;
-            color: gold;
-            font-size: 6em;
+        body {
+            font-size: large;
+            background: linear-gradient(to right, lightsalmon, lightblue);
         }
 
-        .my-pro {
-            line-height: 1.5;
-            padding-top: 10px;
+        .main {
+            background: whitesmoke;
+            width: 98%;
+            height: 500px;
+            margin-left: 1%;
+            padding-top: 20px;
+            border-radius: 15px;
+            font-weight: 900;
+            font-size: 50px;
+            line-height: 3px;
+            box-sizing: border-box;
+        }
+        
+        .btn {
+            font-size: large;
+            border-radius: 7px;
+            border-color:darkgrey;
+            border-style: solid;
+            height: 50px;
+            width: 150px;
+            font-size: 20px;
         }
 
-        .subtitle {
-            font-size: 3em;
-            padding-left: 10px;
+        .btn:hover {
+            animation: button 0.3s ease-in-out forwards;
         }
 
-        .link {
-            font-size: 2em;
-            padding-left: 25px;
-        }
     </style>
 </head>
 <body>
-    <h1 class="title">UNK_114514's website</h1>
-
-    <div class="my-pro">
-        <h3 class="subtitle">My Projects</h3>
-
-        
-        <a href="./demo.html" class="link">Rick Rolling - demo</a>
-        <br>
-        <a href="https://wwand.lanzout.com/iFyCm3bsdvob" class="link">Shoot you fireball! - Mc Datapack / 1.21.10</a>
-        <br>
-        <a href="https://github.com/unk-114514/mcobj" class="link">McObj - indev</a>
-        <br>
-        <a href="https://wwand.lanzout.com/iBgpe3fpbb2d" class="link">Friendly Creeper Mod - 1.21.11 Fabric</a>
-        <br>
-        <a href="https://wwand.lanzout.com/iZB1q3kcv07e" class="link">Railgun datapack</a>
-        <h3 class="subtitle">About Me</h3>
-
-        <a href="https://github.com/unk-114514" class="link">Github</a>
-        <p class="link">unk_1919810@outlook.com</p>
+    <div class="main">
+        <p style="margin-top: 40px; box-sizing: border-box; margin-left: 20px; font-size: 80px; font-weight: 900;">Hello</p>
+        <button class="btn" style="margin-left: 20px;" onclick="window.open('https://github.com/UNK-114514/')">
+            My Projects
+        </button>
+        <button class="btn" onclick="window.open('./index.html')">
+            About Me
+        </button>
     </div>
 </body>
 </html>
