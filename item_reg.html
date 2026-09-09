@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator</title>
+</head>
+<body>
+    id: <input type="text" id="input" placeholder="使用下划线分割单词">
+    <button onclick="generate()">提交</button>
+    <p id="result"></p>
+</body>
+<script>
+    function generate() {
+        let id = document.getElementById("input").value;
+
+        let upper_id = id.toUpperCase();
+
+        let result = `public static final DeferredItem<Item> ${upper_id} = ITEMS.register("${id}", () -> new Item(new Item.Properties()));`
+
+        document.getElementById("result").textContent = result;
+    }
+</script>
+</html>
